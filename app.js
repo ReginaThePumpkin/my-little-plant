@@ -7,7 +7,9 @@ var cors = require('cors');
 var index = require('./routes/index'); // Variable que contiene la ruta del index.js
 var sensors = require('./routes/sensors'); // Variable que contiene la ruta del sensors.js
 
-var port = 8060; // Declarando port en el 8060
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+//var port = 8060; // Declarando port en el 8060
 var app = express(); // Metodos necesarios para poder crear una aplicacion web
 
 app.use(cors()); // Inicializamos el cors()
